@@ -1,0 +1,145 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+nav{
+  overflow:hidden;
+  height:12vh;
+}
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-family: "Alice", serif;
+  margin-right: 20px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: color 0.3s ease;
+  opacity: 0.75;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 3px; 
+  width: 0;
+  max-width: 80%;
+  height: 2px; 
+  background-color:  rgb(220,68,22,85%);
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.nav-link:hover::after {
+  width:80%;
+}
+
+.nav-link.active {
+  opacity:1;
+}
+
+.nav-link.active::after {
+  width: 100%; 
+}
+
+.loginBtnPopup {
+  border: none;
+  cursor: pointer;
+  font-family: "Alice", serif;
+  background-color: rgb(220,68,22,85%) ;
+  color: white;
+  font-size: 15px;
+  border-radius: 1px;
+  padding:10px 50px;
+
+}
+
+.navbar{
+  z-index:4;
+  background-color: transparent !important;
+  border: none;
+
+}
+
+.loginBtnPopup:hover {
+  background-color: rgba(194, 59, 18, 0.85) ;
+}
+
+.userdisplay{
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-family: "Alice", serif;
+  margin-right: 20px;
+  margin-top:7px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: color 0.3s ease;
+
+  cursor:pointer;
+}
+
+
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(7, 7, 7, 0.575) !important;
+  min-width: 160px;
+  padding: 12px 16px;
+  z-index: 1;
+ 
+}
+
+
+.user-dropdown:hover .user-dropdown-content {
+  display: block;
+}
+
+.logoutBtn{
+  border:none;
+  background-color: rgb(220, 68, 22, 85%);
+  color:white;
+  cursor: pointer;
+  width:100%;
+  transition: 0.3s ease;
+ 
+}
+
+.logoutBtn:hover{
+  background-color: rgba(175, 55, 18, 0.85) ;
+}
+
+.offcanvas {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+  background-color: rgb(7, 7, 7) !important;
+}
+
+.offcanvas.show {
+  transform: translateX(0);
+}
+
+.offcanvas .nav-link,
+.offcanvas .btn-close {
+  color: white !important; 
+}
+
+.offcanvas .offcanvas-title {
+  color: white; 
+}
+.offcanvas .btn-close {
+  filter: invert(1); 
+}
